@@ -6,6 +6,7 @@ import Path5 from './svgs/path5';
 import Path52 from './svgs/path52';
 import Header from '../components/header';
 import { Box } from '@material-ui/core';
+import Home from '../asserts/ggk.svg'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -18,6 +19,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
         },
+        img: {
+            maxWidth: "100vw",
+            width: "100vw"
+        }
 
 
 
@@ -31,10 +36,7 @@ export default function ButtonAppBar() {
     return (
         <div className={classes.root}>
             <Header />
-
-            <Path3 />
-
-
+            <img className={classes.img} src={Home} />
 
 
 

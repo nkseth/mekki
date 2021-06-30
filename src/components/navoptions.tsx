@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            [theme.breakpoints.down('sm')]: {
+                display: "none"
+            },
 
 
         },

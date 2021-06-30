@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: 'space-between',
             position: "absolute",
             width: '100vw',
-            height: 1150,
+            height: 1200, paddingBottom: 500,
             dispaly: 'flex',
             JustifyContent: 'flex-start',
             backgroundColor: 'green',
@@ -59,7 +59,8 @@ const useStyles = makeStyles((theme: Theme) =>
             top: 0,
             right: 0,
             zIndex: -4,
-            filter: "drop-shadow(3px 5px 20px rgb(0 0 0 / 0.4))"
+            filter: "drop-shadow(3px 5px 20px rgb(0 0 0 / 0.4))",
+
 
         },
 
@@ -75,15 +76,21 @@ const useStyles = makeStyles((theme: Theme) =>
             objectFit: 'cover'
         },
         path8: {
-            height: "100%",
-            width: '100%',
+            height: "50%",
+            width: '50%',
             position: 'absolute',
 
             top: 0,
             right: 0,
-            zIndex: -8,
+            zIndex: 1,
             backgroundRepeat: 'no-repeat',
 
+        },
+        group: {
+
+
+            clipPath: "url(#circleView)",
+            width: 500, height: 250
         },
 
     }),
@@ -93,6 +100,8 @@ const Path3 = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+
+
             <svg className={classes.path3} width="100%" height="100%" viewBox="0 0 1906 1050" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-35 901.792C-35 901.792 498.941 635.526 965.7 970.952C1432.46 1306.38 1749.74 984.788 1749.74 984.788C1749.74 984.788 1911.43 877.59 1905.33 590.576C1899.23 303.562 1905.33 -80.2759 1905.33 -80.2759H-35V901.792Z" fill="#F5F5F5" />
             </svg>
@@ -103,7 +112,20 @@ const Path3 = () => {
                 <path d="M1613.23 -32.5241L1350.34 879.344C1259.43 1194.66 888.418 1352.69 521.663 1232.32L520.668 1232C153.912 1111.63 -69.7077 758.436 21.1987 443.126L284.097 -468.742C375.006 -784.059 746.016 -942.092 1112.77 -821.724L1113.77 -821.398C1480.52 -701.029 1704.14 -347.838 1613.23 -32.5241Z" fill="#20368F" />
             </svg>
 
-        </div>
+            <div >
+                <svg width="500" height="250">
+                    <defs>
+                        <clipPath id="circleView">
+                            <circle cx="250" cy="125" r="125" fill="#FFFFFF" />
+                        </clipPath>
+                    </defs>
+
+                    <img src={group} className={classes.group} />
+                </svg>
+
+            </div>
+
+        </div >
     )
 }
 
