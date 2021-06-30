@@ -125,7 +125,7 @@ export default function ButtonAppBar() {
                 <Link href="/appointment">
                     <Box className={classes.appointment}>
                         <Box className={classes.cpad} >
-                            <img className={classes.calendericon} src={Calender} />
+                            <Calender className={classes.calendericon} />
                         </Box>
                         <Box className={classes.gpad}>
                             Get Appointment
